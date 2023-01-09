@@ -55,12 +55,60 @@
                         start_year: 1930,
                         end_year: (Time.now.year - 5),
                         date_separator: '%s'),
-                      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+                      "年　", "月　") + "日" %>
         </div>
       </div>
 
+      <div class="field">
+        <div class='form-text-wrap'>
+          年齢
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
+      </div>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          パーソナルカラー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:personal_color_id, PersonalColor.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
+      </div>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          肌の色
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:skin_color_id, SkinColor.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
+      </div>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          肌タイプ
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:skin_type_id, SkinType.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
+      </div>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          顔タイプ
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:face_type_id, FaceType.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
+      </div>
+
+      <div class="field">
+        <div class='form-text-wrap'>
+          メイク傾向
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:makeup_type_id, MakeupType.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
+      </div>
+
       <div class="actions">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "登録" %>
       </div>
     <% end %>
   </div>
