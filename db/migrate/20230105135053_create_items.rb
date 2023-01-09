@@ -5,7 +5,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :category_id  , null: false
       t.integer :rating_id    , null: false
       t.text    :description  , null: false
-      t.references :user      , null: false, foreign_key: true
+      t.integer :user_id      , null: false, foreign_key: true
       t.timestamps
     end
   end

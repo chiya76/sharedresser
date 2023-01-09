@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :items
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :age
   belongs_to :face_type
