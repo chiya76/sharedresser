@@ -12,7 +12,8 @@ class User < ApplicationRecord
   belongs_to :skin_color
   belongs_to :skin_type
 
-
+  validates :nickname, presence: true
+  validates :birthday, presence: true
 
   validates :age_id, numericality: { other_than: 1 , message: "can't be blank"}
   validates :face_type_id, numericality: { other_than: 1 , message: "can't be blank"}
