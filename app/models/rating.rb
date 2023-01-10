@@ -1,4 +1,4 @@
-class Genre < ActiveHash::Base
+class Rating < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '★' },
@@ -7,4 +7,8 @@ class Genre < ActiveHash::Base
     { id: 5, name: '★★★★' },
     { id: 6, name: '★★★★★' }
   ]
+
+  include ActiveHash::Associations
+  has_many :items
+
   end
