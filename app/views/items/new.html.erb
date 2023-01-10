@@ -1,0 +1,64 @@
+<div class="items-post-contents">
+  
+  <div class="items-post-main">
+    <h2 class="items-post-title">アイテムを登録</h2>
+    <%= form_with model: @item, url: items_path, local: true do |f| %>
+
+
+    <%# 商品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        アイテム画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /商品画像 %>
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        商品名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :item_name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)" %>
+      
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+         <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          評価
+          <span class="indispensable">必須</span>
+        </div>
+         <%= f.collection_select(:rating_id, Rating.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          アイテムの説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）" ,rows:"7" %>
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "POST", class:"post-btn" %>
+      <%=link_to 'BACK', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+</div>
