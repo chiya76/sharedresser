@@ -1,7 +1,7 @@
 <div class="contents row">
   <% @items.each do |item| %>
     <div class="content_post" style="background-image: url(<%= item.image %>);">
-      <p><%= item.text %></p>
+      <p><%= image_tag item.image.variant(resize: '150x150') if item.image.attached? %></p>
       <span class="item_name">
         <%= item.item_name %>
       </span>
