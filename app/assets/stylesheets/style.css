@@ -16,7 +16,7 @@ a {
 
 .header_bar {
   padding: 10px;
-  background-color: #df212c;
+  background-color: #990000;
   position: sticky;
   z-index: 999;
   height: 62px;
@@ -50,6 +50,40 @@ a.header {
 アイテム一覧表示
 **************/
 
+.index_top {
+  color: #990000;
+}
+
+.index_main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.index_item {
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #990000;
+}
+
+.item_name {
+  font-size: 15px;
+}
+
+.item_rating, .item_category {
+  font-size: 10px;
+}
+
+.item_user {
+  font-size: 13px;
+}
 
 
 
@@ -62,7 +96,7 @@ a.header {
   padding: 1px;
   display: flex;
   justify-content: center;
-  background-color: rgb(255, 182, 182);
+  background-color: #990000;
   color: #ffffff;
   font-size: small;
 }

@@ -1,10 +1,25 @@
-<div class="contents row">
-  <% @items.each do |item| %>
-    <div class="content_post" style="background-image: url(<%= item.image %>);">
-      <p><%= image_tag item.image.variant(resize: '150x150') if item.image.attached? %></p>
-      <span class="item_name">
-        <%= item.item_name %>
-      </span>
-    </div>
-  <% end %>
+<div class="index">
+  <div class="index_top">
+    ♡お気に入りのコスメをシェアしましょう！<br>
+    ♡あなたとプロフィールが似ている人のお気に入りをチェックできます！
+  </div>
+  <div class="index_main">
+    <% @items.each do |item| %>
+      <div class="index_item" style="background-image: url(<%= item.image %>);">
+        <p><%= image_tag item.image.variant(resize: '130x130') if item.image.attached? %></p>
+        <span class="item_name">
+          <%= item.item_name %>
+        </span>
+        <span class="item_rating">
+          <%= item.rating.name %>
+        </span>
+        <span class="item_category">
+          category: <%= item.category.name %>
+        </span>
+        <span class="item_user">
+          <%= item.user.nickname %>
+        </span>
+      </div>
+    <% end %>
+  </div>
 </div>
