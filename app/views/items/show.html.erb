@@ -1,0 +1,26 @@
+
+      <div class="show-item">
+        <%= image_tag @item.image, class:"show-item-image" if @item.image.attached? %>
+        <div class="show-item_name">
+          <%= @item.item_name %>
+        </div>
+        <div class="show-item_rating">
+          <%= @item.rating.name %>
+        </div>
+        <div class="show-item_category">
+          category: <%= @item.category.name %>
+        </div>
+        <div class="show-item-description">
+          <%= @item.description %>
+        </div>
+        <div class="show-item-user">
+          <%= @item.user.nickname %>
+        </div>
+
+        <% if user_signed_in? && current_user.id == @item.user_id %>
+          <div class="show-btn-area">
+            <%= link_to "edit", edit_item_path(@item.id), method: :get, class: "show-item-btn" %>
+            <%= link_to "delete", item_path(@item.id), method: :delete, class:"show-item-btn" %>
+          </div>
+        <% end %>
+      </div>
