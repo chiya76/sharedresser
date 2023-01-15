@@ -1,0 +1,102 @@
+/*************
+全体 
+**************/
+
+body {
+  font-family: メイリオ;
+}
+
+a {
+  text-decoration: none; 
+}
+
+/*************
+ヘッダー
+**************/
+
+.header_bar {
+  padding: 10px;
+  background-color: #990000;
+  position: sticky;
+  z-index: 999;
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header_logo {
+  font-size: 30px;
+}
+
+a.header {
+  color: #ffffff;
+}
+
+.header_right {
+  display: flex;
+}
+
+.header_botton {
+  padding: 10px;
+  margin-left: 5px;
+  border: solid 2px #ffffff;
+  border-radius: 10px;
+}
+
+
+/*************
+アイテム一覧表示
+**************/
+
+.index_top {
+  color: #990000;
+}
+
+.index_main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.index_item {
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #990000;
+}
+
+.item_name {
+  font-size: 15px;
+}
+
+.item_rating, .item_category {
+  font-size: 10px;
+}
+
+.item_user {
+  font-size: 13px;
+}
+
+
+
+/*************
+フッター
+**************/
+
+.footer_bar {
+  position: sticky;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  background-color: #990000;
+  color: #ffffff;
+  font-size: small;
+}
