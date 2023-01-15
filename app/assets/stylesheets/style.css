@@ -28,6 +28,7 @@ a {
 
 .header_logo {
   font-size: 30px;
+  font-weight: bold;
 }
 
 a.header {
@@ -86,6 +87,116 @@ a.header {
 }
 
 
+/*************
+新規登録
+**************/
+
+.sign_up {
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100vm;
+  color: #990000;
+}
+
+.sign_up_title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sign_up_explain {
+  font-size: 12px;
+}
+
+.form-text, .form-text-wrap {
+  font-size: 13px;
+}
+
+.indispensable {
+  color: #ffffff;
+  background-color: #990000;
+  font-size: 10px;
+  padding: 1px;
+}
+
+.input-default {
+  height: 20px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+}
+
+.select-box {
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.birth-date {
+  height: 30px;
+}
+
+.sign_up_botton {
+  background-color: #990000;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px;
+  width: 100px;
+}
+
+.sign_up_botton:hover {
+  background-color: #ffffff;
+  color: #990000;
+  border: #990000 solid 1px;
+}
+
+/*************
+ログイン
+**************/
+
+.login {
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100vm;
+  color: #990000;
+}
+
+.login_title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-label {
+  font-size: 13px;
+}
+
+.form {
+  height: 20px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login_btn {
+  background-color: #990000;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px;
+  width: 100px;
+}
+
+.login_btn:hover {
+  background-color: #ffffff;
+  color: #990000;
+  border: #990000 solid 1px;
+}
 
 /*************
 フッター
