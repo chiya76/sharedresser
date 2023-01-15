@@ -1,0 +1,51 @@
+<div class="items-post">
+  <div class="items-post-title">アイテムの情報を修正</div>
+    <%= form_with model: @item, local: true do |f| %>
+    <br>
+      <%# 商品画像 %>
+        <div class="form-label">
+          image
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="image-btn">
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      <%# /商品画像 %>
+      <br>
+      <%# 商品名と商品説明 %>
+        <div class="form-label">
+          アイテム名
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :item_name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)" %>
+        <br>
+        <br>
+          <div class="form-label">
+            カテゴリー
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <br>
+        <br>
+          <div class="form-label">
+            評価
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:rating_id, Rating.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+          <br>
+          <br>
+          <div class="form-label">
+            アイテムの説明
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）" ,rows:"7" %>
+      <%# /商品名と商品説明 %>
+      <br>
+      <br>
+      <%# 下部ボタン %>
+        <%= f.submit "変更する", class:"post-btn" %>
+      <%# /下部ボタン %>
+    
+    <% end %>
+  </div>
+</div>
