@@ -76,6 +76,8 @@ a.header {
 
 .item_name {
   font-size: 15px;
+  color: #990000;
+  text-decoration: none;
 }
 
 .item_rating, .item_category {
@@ -85,6 +87,69 @@ a.header {
 .item_user {
   font-size: 13px;
 }
+
+/*************
+アイテム詳細表示
+**************/
+
+.show-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: #990000 solid 1px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100vm;
+  color: #990000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-item-image {
+  width: 50%;
+  height: 50%;
+  border-radius: 30px;
+}
+
+.show-item_name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #990000;
+}
+
+.show-item_rating, .show-item_category {
+  font-size: 10px;
+}
+
+.show-item-description {
+  font-size: 15px;
+  font-weight: bold;
+  color: #990000;
+}
+
+.show-item-user {
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.show-item-btn {
+  background-color: #990000;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px;
+  width: 100px;
+}
+
+.show-item-btn:hover {
+  background-color: #ffffff;
+  color: #990000;
+  border: #990000 solid 1px;
+}
+
+
 
 
 /*************
@@ -197,6 +262,47 @@ a.header {
   color: #990000;
   border: #990000 solid 1px;
 }
+
+/*************
+アイテム投稿画面・編集画面
+**************/
+
+.items-post {
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100vm;
+  color: #990000;
+}
+
+.items-post-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.items-text {
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.post-btn {
+  background-color: #990000;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px;
+  width: 100px;
+}
+
+.post-btn:hover {
+  background-color: #ffffff;
+  color: #990000;
+  border: #990000 solid 1px;
+}
+
 
 /*************
 フッター

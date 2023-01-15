@@ -1,6 +1,6 @@
 <div class="items-post">
-  <div class="items-post-title">POST</div>
-    <%= form_with model: @item, url: items_path, local: true do |f| %>
+  <div class="items-post-title">アイテムの情報を修正</div>
+    <%= form_with model: @item, local: true do |f| %>
     <br>
       <%# 商品画像 %>
         <div class="form-label">
@@ -43,7 +43,7 @@
       <br>
       <br>
       <%# 下部ボタン %>
-        <%= f.submit "POST", class:"post-btn" %>
+        <%= f.submit "変更する", class:"post-btn" %>
       <%# /下部ボタン %>
     
     <% end %>
