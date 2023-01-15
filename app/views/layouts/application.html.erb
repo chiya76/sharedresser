@@ -10,13 +10,40 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <%= current_user.nickname %>
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to '新規登録', new_user_registration_path %>
-      <%= link_to 'ログイン', new_user_session_path %>
-    <% end %>
+    <header>
+      <div class="header_bar">
+        <div class="header_logo">
+          <a href="/" class="header">ShareDresser</a>
+        </div>
+        <% if user_signed_in? %>
+          <div class="header_right">
+            <div class="header_botton">
+              <%= current_user.nickname %>
+            </div>
+            <div class="header_botton">
+              <%= link_to 'log out', destroy_user_session_path, method: :delete, class: "header" %>
+            </div>
+            <div class="header_botton">
+              <%= link_to "POST", new_item_path, class: "header" %>
+            </div>
+          </div>
+        <% else %>
+          <div class="header_right">
+            <div class="header_botton">
+              <%= link_to 'Join', new_user_registration_path, class: "header" %>
+            </div>
+            <div class="header_botton">
+              <%= link_to 'log in', new_user_session_path, class: "header" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
+      <footer>
+        <div class="footer_bar">
+          <p>ShareDresser 2023.</p>
+        </div>
+      </footer>
   </body>
 </html>

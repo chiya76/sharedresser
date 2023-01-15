@@ -1,0 +1,68 @@
+/*************
+全体 
+**************/
+
+body {
+  font-family: メイリオ;
+}
+
+a {
+  text-decoration: none; 
+}
+
+/*************
+ヘッダー
+**************/
+
+.header_bar {
+  padding: 10px;
+  background-color: #df212c;
+  position: sticky;
+  z-index: 999;
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header_logo {
+  font-size: 30px;
+}
+
+a.header {
+  color: #ffffff;
+}
+
+.header_right {
+  display: flex;
+}
+
+.header_botton {
+  padding: 10px;
+  margin-left: 5px;
+  border: solid 2px #ffffff;
+  border-radius: 10px;
+}
+
+
+/*************
+アイテム一覧表示
+**************/
+
+
+
+
+/*************
+フッター
+**************/
+
+.footer_bar {
+  position: sticky;
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 182, 182);
+  color: #ffffff;
+  font-size: small;
+}
