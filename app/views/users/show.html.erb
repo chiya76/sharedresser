@@ -1,7 +1,14 @@
-<div class="index">
-  <div class="index_top">
-    ♡お気に入りのコスメをシェアしよう！<br>
-    ♡あなたとプロフィールが似ている人のお気に入りをチェックしよう！
+<div class="user-show">
+  <div class="user-show-main">
+    <div class="user-show-title"><%= @nickname %></div>
+    <div class="user-show-info">
+      年齢＊<%= @age %><br>
+      パーソナルカラー＊<%= @personal_color %><br>
+      肌の色＊<%= @skin_color %><br>
+      肌タイプ＊<%= @skin_type %><br>
+      顔タイプ＊<%= @face_type %><br>
+      メイク傾向＊<%= @makeup_type %><br>
+    </div>
   </div>
   <div class="index_main">
     <% @items.each do |item| %>
@@ -17,10 +24,6 @@
         </span>
         <span class="item_category">
           category: <%= item.category.name %>
-        </span>
-        <span class="item_user">
-          <%= link_to item.user.nickname, "/users/#{item.user.id}", class: "item-user" %>
-
         </span>
       </div>
     <% end %>

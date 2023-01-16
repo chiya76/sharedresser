@@ -18,7 +18,7 @@
         <% if user_signed_in? %>
           <div class="header_right">
             <div class="header_botton">
-              <%= current_user.nickname %>
+              <%= link_to current_user.nickname, "/users/#{current_user.id}", class: "header" %>
             </div>
             <div class="header_botton">
               <%= link_to 'log out', destroy_user_session_path, method: :delete, class: "header" %>
