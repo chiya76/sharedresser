@@ -1,12 +1,12 @@
 <div class="index">
   <div class="index_top">
-    ♡お気に入りのコスメをシェアしましょう！<br>
-    ♡あなたとプロフィールが似ている人のお気に入りをチェックできます！
+    ♡お気に入りのコスメをシェアしよう！<br>
+    ♡あなたとプロフィールが似ている人のお気に入りをチェックしよう！
   </div>
   <div class="index_main">
     <% @items.each do |item| %>
       <div class="index_item">
-        <p><%= image_tag item.image.variant(resize: '130x130') if item.image.attached? %></p>
+        <p><%= image_tag item.image.variant(resize: '130x130'), class:"index-image" if item.image.attached? %></p>
         <span class="item_name">
           <%= link_to item_path(item.id), class:"item_name", method: :get do %>
             <%= item.item_name %>
@@ -19,7 +19,8 @@
           category: <%= item.category.name %>
         </span>
         <span class="item_user">
-          <%= item.user.nickname %>
+          <%= link_to item.user.nickname, "/users/#{item.user.id}", class: "item-user" %>
+
         </span>
       </div>
     <% end %>
