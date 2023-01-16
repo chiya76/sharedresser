@@ -62,7 +62,8 @@ a.header {
 }
 
 .index_item {
-  background-color: #dcdcdc;
+  background-color: #ffffff;
+  border: #990000 solid 1px;
   border-radius: 10px;
   height: 200px;
   width: 200px;
@@ -72,6 +73,10 @@ a.header {
   flex-direction: column;
   align-items: center;
   color: #990000;
+}
+
+.index-image {
+  border-radius: 10px;
 }
 
 .item_name {
@@ -84,8 +89,10 @@ a.header {
   font-size: 10px;
 }
 
-.item_user {
+.item-user {
   font-size: 13px;
+  color: #990000;
+  text-decoration: none;
 }
 
 /*************
@@ -130,8 +137,28 @@ a.header {
 }
 
 .show-item-user {
-  font-size: 13px;
+  background-color: #ffffff;
+  color: #990000;
+  border: #990000 dotted 2px;
+  border-radius: 10px;
+  margin-top: 30px;
   margin-bottom: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show-item-username {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #990000;
+}
+
+.show-item-userinfo { 
+  font-size: 11px;
 }
 
 .show-item-btn {
@@ -157,7 +184,8 @@ a.header {
 **************/
 
 .sign_up {
-  background-color: #dcdcdc;
+  background-color: #ffffff;
+  border: #990000 solid 1px;
   border-radius: 10px;
   padding: 20px;
   margin-top: 10px;
@@ -190,17 +218,18 @@ a.header {
   height: 20px;
   width: 300px;
   border-radius: 5px;
-  border: none;
+  border: #990000 solid 1px;
 }
 
 .select-box {
   height: 20px;
   border-radius: 5px;
-  border: none;
+  border: #990000 solid 1px;
 }
 
 .birth-date {
   height: 30px;
+  border: #990000 solid 1px;
 }
 
 .sign_up_botton {
@@ -223,7 +252,8 @@ a.header {
 **************/
 
 .login {
-  background-color: #dcdcdc;
+  background-color: #ffffff;
+  border: #990000 solid 1px;
   border-radius: 10px;
   padding: 20px;
   margin-top: 10px;
@@ -244,7 +274,7 @@ a.header {
 .form {
   height: 20px;
   width: 300px;
-  border: none;
+  border: #990000 solid 1px;
   border-radius: 5px;
 }
 
@@ -263,12 +293,53 @@ a.header {
   border: #990000 solid 1px;
 }
 
+
+/*************
+ユーザーマイページ
+**************/
+
+.user-show {
+  background-color: #990000;
+  border: #990000 solid 1px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100vm;
+  color: #ffffff;
+}
+
+.user-show-main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+
+}
+
+.user-show-title {
+  font-weight: bold;
+  font-size: 20px;
+  width: 150px;
+  height: 150px;
+  border: #ffffff dotted 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
 /*************
 アイテム投稿画面・編集画面
 **************/
 
 .items-post {
-  background-color: #dcdcdc;
+  background-color: #ffffff;
+  border: #990000 solid 1px;
   border-radius: 10px;
   padding: 20px;
   margin-top: 10px;
@@ -283,7 +354,7 @@ a.header {
 }
 
 .items-text {
-  border: none;
+  border: #990000 solid 1px;
   border-radius: 5px;
   width: 300px;
 }

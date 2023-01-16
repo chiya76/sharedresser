@@ -1,0 +1,31 @@
+<div class="user-show">
+  <div class="user-show-main">
+    <div class="user-show-title"><%= @nickname %></div>
+    <div class="user-show-info">
+      年齢＊<%= @age %><br>
+      パーソナルカラー＊<%= @personal_color %><br>
+      肌の色＊<%= @skin_color %><br>
+      肌タイプ＊<%= @skin_type %><br>
+      顔タイプ＊<%= @face_type %><br>
+      メイク傾向＊<%= @makeup_type %><br>
+    </div>
+  </div>
+  <div class="index_main">
+    <% @items.each do |item| %>
+      <div class="index_item">
+        <p><%= image_tag item.image.variant(resize: '130x130'), class:"index-image" if item.image.attached? %></p>
+        <span class="item_name">
+          <%= link_to item_path(item.id), class:"item_name", method: :get do %>
+            <%= item.item_name %>
+          <% end %>
+        </span>
+        <span class="item_rating">
+          <%= item.rating.name %>
+        </span>
+        <span class="item_category">
+          category: <%= item.category.name %>
+        </span>
+      </div>
+    <% end %>
+  </div>
+</div>
