@@ -14,7 +14,15 @@
           <%= @item.description %>
         </div>
         <div class="show-item-user">
-          <%= @item.user.nickname %>
+          <%= link_to @item.user.nickname, "/users/#{@item.user.id}", class: "show-item-username" %>
+          <div class="show-item-userinfo">
+            年齢＊<%= @item.user.age.name %><br>
+            パーソナルカラー＊<%= @item.user.personal_color.name %><br>
+            肌の色＊<%= @item.user.skin_color.name %><br>
+            肌タイプ＊<%= @item.user.skin_type.name %><br>
+            顔タイプ＊<%= @item.user.face_type.name %><br>
+            メイク傾向＊<%= @item.user.makeup_type.name %><br>
+          </div>
         </div>
 
         <% if user_signed_in? && current_user.id == @item.user_id %>
