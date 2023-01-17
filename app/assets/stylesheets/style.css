@@ -65,7 +65,7 @@ a.header {
   background-color: #ffffff;
   border: #990000 solid 1px;
   border-radius: 10px;
-  height: 200px;
+  height: 100vm;
   width: 200px;
   margin: 10px;
   padding: 10px;
@@ -77,6 +77,8 @@ a.header {
 
 .index-image {
   border-radius: 10px;
+  height: 40vm;
+  width: 40vm;
 }
 
 .item_name {
