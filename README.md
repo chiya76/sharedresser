@@ -1,32 +1,104 @@
-# テーブル設計
-
-## users テーブル
-
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| nickname           | string  | null: false               |
-| email              | string  | null: false, unique: true |
-| encrypted_password | string  | null: false               |
-| birthday           | date    | null: false               |
-| age_id             | integer | null: false               |
-| personal_color_id  | integer | null: false               |
-| skin_color_id      | integer | null: false               |
-| skin_type_id       | integer | null: false               |
-| face_type_id       | integer | null: false               |
-| makeup_type_id     | integer | null: false               |
-
-## Association
-- has_many :items
 
 
-## items テーブル 
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| item_name          | string     | null: false                    |
-| category_id        | integer    | null: false                    |
-| rating_id          | integer    | null: false                    |
-| description        | text       | null: false                    |
-| user_id            | integer    | null: false, foreign_key: true |
+# アプリケーション名
+Share Dresser<br>
+(シェア　ドレッサー)
 
-## Association
-- belongs_to :user
+<br>
+<br>
+
+# アプリケーション概要
+持っているお気に入りのコスメを投稿し、他のユーザーと共有する。<br>
+ユーザー情報を詳細に登録することで、自分と似ているプロフィールのユーザーが気に入っているコスメを探すことができ、自分に合ったコスメを見つけられる。
+
+<br>
+<br>
+
+# URL
+http://18.180.243.158/
+
+<br>
+<br>
+
+# テスト用アカウント
+- Basic認証パスワード：1234
+- Basic認証ID：admin
+- メールアドレス：test@mail.jp
+- パスワード：test11
+
+<br>
+<br>
+
+# 利用方法
+## お気に入りのコスメを投稿する
+1. トップページ（一覧ページ）のヘッダーからユーザー新規登録を行う
+2. POSTボタンから、コスメの情報（画像・アイテム名・カテゴリー・評価・説明）を入力し投稿する
+
+<br>
+
+## 自分と似たプロフィールのユーザーが気に入っているコスメを探す
+1. 一覧ページからアイテム名をクリックして、コスメの詳細と投稿したユーザーの情報を確認する
+2. ユーザー名をクリックして、そのユーザーが投稿したコスメの一覧を確認する
+
+<br>
+<br>
+
+# アプリケーションを作成した背景
+ネットでコスメを探していると「自分に合ったコスメを使うのが大切である」というアドバイスをよく見かけるが、自分に合うかは使用してみないと分からず、お金と時間がかかってしまうという悩みがあった。この悩みを解決する方法として、「自分と特徴が似ている人のおすすめのコスメを試せば、効率よく自分に合ったコスメを見つけることができるのではないか」と仮説を立てた。同じ悩みを抱えている方も多いと推測し、解決のために、ユーザーの情報を詳しく登録してもらい、どんな人がおすすめしているかが確認できる状態で、コスメの口コミをシェアするSNSアプリケーションを開発することにした。
+
+<br>
+<br>
+
+# 洗い出した要件
+[要件を定義したシート](https://docs.google.com/spreadsheets/d/1tP7JZcGd0WyTzrTlpBHbDX97OCQ2QOgk5RO2YwNUplM/edit?usp=sharing)
+
+<br>
+<br>
+
+# 実装した機能についての画像やGIFおよびその説明
+
+
+<br>
+<br>
+
+# 実装予定の機能
+- アイテム・ユーザー検索機能
+- ログイン時のSNS認証
+- タグ付け機能
+- 画像の複数投稿・プレビュー機能
+- お気に入り機能
+- フォロー機能
+
+<br>
+<br>
+
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/9f9d64e3e0ce575e92d85f96b9243897.png)](https://gyazo.com/9f9d64e3e0ce575e92d85f96b9243897)
+
+<br>
+<br>
+
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/d964e7a340256a4d029192a0b92f720a.png)](https://gyazo.com/d964e7a340256a4d029192a0b92f720a)
+
+<br>
+<br>
+
+# 開発環境
+Ruby / Ruby on Rails / MySQL / Github / AWS / Visual Studio Code
+
+<br>
+<br>
+
+# ローカルでの動作方法
+以下のコマンドを順に実行。
+% git clone https://github.com/chiya76/sharedresser.git
+% cd sharedresser
+% bundle install
+% yarn install
+
+<br>
+<br>
+
+# 工夫したポイント
+- 実際に自分が抱えている悩みを解決できるアプリケーションを作成したいと考え、コンセプトと機能にこだわった。
