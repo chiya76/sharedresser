@@ -1,12 +1,8 @@
 <div class="index">
-  <div class="index_top">
-    ♡お気に入りのコスメをシェアしよう！<br>
-    ♡あなたとプロフィールが似ている人のお気に入りをチェックしよう！
-  </div>
   <div class="searchform">
     <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
-      <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-      <%= form.submit "検索", class: "search-btn" %>
+    <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
     <% end %>
   </div>
   <div class="index_main">
@@ -14,9 +10,9 @@
       <div class="index_item">
         <p><%= image_tag item.image.variant(resize: '130x130'), class:"index-image" if item.image.attached? %></p>
         <span class="item_name">
-        <%= link_to item_path(item.id), class:"item_name", method: :get do %>
-          <%= item.item_name %>
-        <% end %>
+          <%= link_to item_path(item.id), class:"item_name", method: :get do %>
+            <%= item.item_name %>
+          <% end %>
         </span>
         <span class="item_rating">
           <%= item.rating.name %>
@@ -26,6 +22,7 @@
         </span>
         <span class="item_user">
           <%= link_to item.user.nickname, "/users/#{item.user.id}", class: "item-user" %>
+
         </span>
       </div>
     <% end %>

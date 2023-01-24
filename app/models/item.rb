@@ -7,4 +7,12 @@ class Item < ApplicationRecord
 
   validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}
   validates :rating_id, numericality: { other_than: 1 , message: "can't be blank"}
+
+  def self.search(search)
+    if search != ""
+      Item.where('item_name LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end
