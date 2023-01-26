@@ -98,6 +98,39 @@ a.header {
 }
 
 /*************
+アイテム検索フォーム
+**************/
+
+.search {
+  padding: 20px 20px 0px 20px;
+}
+
+.search-input {
+  height: 20px;
+  width: 300px;
+  border: #990000 solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.search-btn {
+  background-color: #990000;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 10px;
+  width: 100px;
+}
+
+.search-btn:hover {
+  background-color: #ffffff;
+  color: #990000;
+  border: #990000 solid 1px;
+}
+
+
+
+/*************
 アイテム詳細表示
 **************/
 
