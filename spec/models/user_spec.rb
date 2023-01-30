@@ -93,6 +93,42 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Birthday can't be blank")
       end
 
+      it 'age_idが空では登録できない' do
+        @user.age_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Age can't be blank")
+      end
+
+      it 'face_type_idが空では登録できない' do
+        @user.face_type_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Face type can't be blank")
+      end
+
+      it 'makeup_type_idが空では登録できない' do
+        @user.makeup_type_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Makeup type can't be blank")
+      end
+
+      it 'personal_color_idが空では登録できない' do
+        @user.personal_color_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Personal color can't be blank")
+      end
+
+      it 'skin_color_idが空では登録できない' do
+        @user.skin_color_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Skin color can't be blank")
+      end
+
+      it 'skin_type_idが空では登録できない' do
+        @user.skin_type_id = 1
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Skin type can't be blank")
+      end
+
 
     end
   end
