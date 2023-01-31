@@ -6,11 +6,11 @@ RSpec.describe User, type: :model do
   end
 
   describe "ユーザー新規登録" do
-    # context '新規登録できるとき' do
-      # it '不足している項目がなく、全角カナ英数字の条件を満たしていれば登録できる' do
-        # expect(@user).to be_valid
-      # end
-    # end
+    context '新規登録できるとき' do
+      it '不足している項目がなく、条件を満たしていれば登録できる' do
+        expect(@user).to be_valid
+      end
+    end
 
     context '新規登録できないとき' do
       it "nicknameが空だと登録できない" do
@@ -62,7 +62,7 @@ RSpec.describe User, type: :model do
       # it 'passwordが英字のみでは登録できない' do
       #   @user.password = 'aaaaaa'
       #   @user.password_confirmation = @user.password
-      #   @user.valid?
+    #   @user.valid?
       #   expect(@user.errors.full_messages).to include('Password Include both half-width letters and numbers')
       # end
 
@@ -73,13 +73,13 @@ RSpec.describe User, type: :model do
       #   expect(@user.errors.full_messages).to include('Password Include both half-width letters and numbers')
       # end
 
-      # it '重複したemailが存在する場合は登録できない' do
-      #   @user.save
-      #   another_user = FactoryBot.build(:user)
-      #   another_user.email = @user.email
-      #   another_user.valid?
-      #   expect(another_user.errors.full_messages).to include('Email has already been taken')
-      # end
+      it '重複したemailが存在する場合は登録できない' do
+        @user.save
+        another_user = FactoryBot.build(:user)
+        another_user.email = @user.email
+        another_user.valid?
+        expect(another_user.errors.full_messages).to include('Email has already been taken')
+      end
 
       it 'emailは@を含まないと登録できない' do
         @user.email = 'testmail'
