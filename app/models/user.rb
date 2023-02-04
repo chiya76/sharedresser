@@ -20,10 +20,10 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both half-width letters and numbers'
 
-  validates :age_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :face_type_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :makeup_type_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :personal_color_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :skin_color_id, numericality: { other_than: 1 , message: "can't be blank"}
-  validates :skin_type_id, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :age_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :face_type_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :makeup_type_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :personal_color_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :skin_color_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :skin_type_id, numericality: { other_than: 1, message: "can't be blank" }
 end
