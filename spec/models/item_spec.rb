@@ -4,7 +4,7 @@ RSpec.describe Item, type: :model do
   before do
     @item = FactoryBot.build(:item)
   end
-    
+
   describe 'アイテム投稿' do
     context 'アイテムが投稿できるとき' do
       it '不足している項目がなく、条件を満たしていれば登録できる' do
