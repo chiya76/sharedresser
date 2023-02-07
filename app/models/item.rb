@@ -7,6 +7,7 @@ class Item < ApplicationRecord
 
   validates :item_name, presence: true
   validates :description, presence: true
+  validates :image, presence: true
 
   validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :rating_id, numericality: { other_than: 1, message: "can't be blank" }
