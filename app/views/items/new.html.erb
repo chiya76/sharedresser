@@ -1,7 +1,8 @@
 <div class="items-post">
   <div class="items-post-title">POST</div>
     <%= form_with model: @item, url: items_path, local: true do |f| %>
-    <br>
+      <%= render "devise/shared/error_messages", model: f.object %>
+      <br>
       <%# 商品画像 %>
         <div class="form-label">
           image
