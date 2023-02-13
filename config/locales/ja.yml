@@ -3,6 +3,13 @@ ja:
     attributes:
       user:
         nickname: ニックネーム
+        birthday: 誕生日
+        age_id: 年齢
+        face_type_id: 顔タイプ
+        makeup_type_id: メイク傾向
+        personal_color_id: パーソナルカラー
+        skin_color_id: 肌の色
+        skin_type_id: 肌タイプ
       item:
         text: テキスト
         image: 画像
