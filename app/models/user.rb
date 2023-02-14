@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates :birthday, presence: true
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX, message: 'は半角で英字と数字の両方を含んでくだい'
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'は半角で英字と数字の両方を含んでください'
 
   validates :age_id, numericality: { other_than: 1, message: "を入力してください" }
   validates :face_type_id, numericality: { other_than: 1, message: "を入力してください" }
