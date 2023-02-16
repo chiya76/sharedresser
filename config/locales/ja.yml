@@ -11,5 +11,8 @@ ja:
         skin_color_id: 肌の色
         skin_type_id: 肌タイプ
       item:
-        text: テキスト
+        item_name: アイテム名
+        description: 説明
+        category_id: カテゴリー
+        rating: 評価
         image: 画像
