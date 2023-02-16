@@ -9,8 +9,8 @@ class Item < ApplicationRecord
   validates :description, presence: true
   validates :image, presence: true
 
-  validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
-  validates :rating_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :category_id, numericality: { other_than: 1, message: "を入力してください" }
+  validates :rating_id, numericality: { other_than: 1, message: "を入力してください" }
 
   def self.search(search)
     if search != ''
