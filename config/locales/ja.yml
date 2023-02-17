@@ -14,5 +14,5 @@ ja:
         item_name: アイテム名
         description: 説明
         category_id: カテゴリー
-        rating: 評価
+        rating_id: 評価
         image: 画像
