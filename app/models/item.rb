@@ -4,13 +4,14 @@ class Item < ApplicationRecord
   belongs_to :category
   belongs_to :rating
   has_one_attached :image
-
-  validates :item_name, presence: true
-  validates :description, presence: true
+  
   validates :image, presence: true
+  validates :item_name, presence: true
 
   validates :category_id, numericality: { other_than: 1, message: "を入力してください" }
   validates :rating_id, numericality: { other_than: 1, message: "を入力してください" }
+
+  validates :description, presence: true
 
   def self.search(search)
     if search != ''
