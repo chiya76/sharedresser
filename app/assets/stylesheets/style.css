@@ -215,7 +215,7 @@ a.header {
 
 
 /*************
-新規登録
+ユーザー新規登録
 **************/
 
 .sign_up {
@@ -407,6 +407,11 @@ a.header {
   background-color: #ffffff;
   color: #990000;
   border: #990000 solid 1px;
+}
+
+.preview-image {
+  height: 100px;
+  width: 100px;
 }
 
 
