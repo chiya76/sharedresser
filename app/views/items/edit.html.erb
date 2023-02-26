@@ -1,6 +1,6 @@
 <div class="items-post">
   <div class="items-post-title">アイテムの情報を修正</div>
-    <%= form_with model: @item, local: true do |f| %>
+    <%= form_with model: @item, id: "new_post", local: true do |f| %>
     <%= render "devise/shared/error_messages", model: f.object %>
     <br>
       <%# 商品画像 %>
