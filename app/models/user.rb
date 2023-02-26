@@ -20,10 +20,10 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'は半角で英字と数字の両方を含んでください'
 
-  validates :age_id, numericality: { other_than: 1, message: "を入力してください" }
-  validates :face_type_id, numericality: { other_than: 1, message: "を入力してください" }
-  validates :makeup_type_id, numericality: { other_than: 1, message: "を入力してください" }
-  validates :personal_color_id, numericality: { other_than: 1, message: "を入力してください" }
-  validates :skin_color_id, numericality: { other_than: 1, message: "を入力してください" }
-  validates :skin_type_id, numericality: { other_than: 1, message: "を入力してください" }
+  validates :age_id, numericality: { other_than: 1, message: 'を入力してください' }
+  validates :face_type_id, numericality: { other_than: 1, message: 'を入力してください' }
+  validates :makeup_type_id, numericality: { other_than: 1, message: 'を入力してください' }
+  validates :personal_color_id, numericality: { other_than: 1, message: 'を入力してください' }
+  validates :skin_color_id, numericality: { other_than: 1, message: 'を入力してください' }
+  validates :skin_type_id, numericality: { other_than: 1, message: 'を入力してください' }
 end

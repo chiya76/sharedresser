@@ -16,13 +16,13 @@ RSpec.describe Item, type: :model do
       it 'imageが空では登録できない' do
         @item.image = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("画像を入力してください")
+        expect(@item.errors.full_messages).to include('画像を入力してください')
       end
 
       it 'item_nameが空では登録できない' do
         @item.item_name = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("アイテム名を入力してください")
+        expect(@item.errors.full_messages).to include('アイテム名を入力してください')
       end
 
       # it 'item_nameが41文字以上では登録できない' do
@@ -34,7 +34,7 @@ RSpec.describe Item, type: :model do
       it 'descriptionが空では登録できない' do
         @item.description = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("説明を入力してください")
+        expect(@item.errors.full_messages).to include('説明を入力してください')
       end
 
       # it 'descriptionが1001文字以上では登録できない' do
@@ -46,13 +46,13 @@ RSpec.describe Item, type: :model do
       it 'category_idが空では登録できない' do
         @item.category_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("カテゴリーを入力してください")
+        expect(@item.errors.full_messages).to include('カテゴリーを入力してください')
       end
 
       it 'rating_idが空では登録できない' do
         @item.rating_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("評価を入力してください")
+        expect(@item.errors.full_messages).to include('評価を入力してください')
       end
 
       it 'ユーザーが紐付いていなければ投稿できない' do
