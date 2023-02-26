@@ -10,23 +10,29 @@
     <% end %>
   </div>
   <div class="index_main">
-    <% @items.each do |item| %>
+    <% if Item.exists? %>
+      <% @items.each do |item| %>
+        <div class="index_item">
+          <p><%= image_tag item.image.variant(resize: '130x130'), class:"index-image" if item.image.attached? %></p>
+          <span class="item_name">
+          <%= link_to item_path(item.id), class:"item_name", method: :get do %>
+            <%= item.item_name %>
+          <% end %>
+          </span>
+          <span class="item_rating">
+            <%= item.rating.name %>
+          </span>
+          <span class="item_category">
+            category: <%= item.category.name %>
+          </span>
+          <span class="item_user">
+            <%= link_to item.user.nickname, "/users/#{item.user.id}", class: "item-user" %>
+          </span>
+        </div>
+      <% end %>
+    <% else %>
       <div class="index_item">
-        <p><%= image_tag item.image.variant(resize: '130x130'), class:"index-image" if item.image.attached? %></p>
-        <span class="item_name">
-        <%= link_to item_path(item.id), class:"item_name", method: :get do %>
-          <%= item.item_name %>
-        <% end %>
-        </span>
-        <span class="item_rating">
-          <%= item.rating.name %>
-        </span>
-        <span class="item_category">
-          category: <%= item.category.name %>
-        </span>
-        <span class="item_user">
-          <%= link_to item.user.nickname, "/users/#{item.user.id}", class: "item-user" %>
-        </span>
+        投稿されたアイテムがまだありません
       </div>
     <% end %>
   </div>
