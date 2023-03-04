@@ -75,10 +75,9 @@ http://18.180.243.158/
 <br>
 
 # 実装予定の機能
-- アイテム・ユーザー検索機能
+- ユーザー検索機能
 - ログイン時のSNS認証
 - タグ付け機能
-- 画像の複数投稿・プレビュー機能
 - お気に入り機能
 - フォロー機能
 
@@ -105,9 +104,13 @@ Ruby / Ruby on Rails / MySQL / Github / AWS / Visual Studio Code
 
 # ローカルでの動作方法
 以下のコマンドを順に実行。
+
 % git clone https://github.com/chiya76/sharedresser.git
+
 % cd sharedresser
+
 % bundle install
+
 % yarn install
 
 <br>
